@@ -65,8 +65,7 @@ public class MinigameTut : MinigameDefBase
             OnClick = (args) => ChangeColor(args, Error0)
 
         };
-        Errors.Add(Error0);
-        AddElement(Error0);
+
         Update();
         Error1 = new() //blue zylinder
         {
@@ -78,8 +77,6 @@ public class MinigameTut : MinigameDefBase
             OnClick = (args) => ChangeColor(args, Error1)
 
         };
-        Errors.Add(Error1);
-        AddElement(Error1);
         Update();
         Error2 = new() //purple strip
         {
@@ -91,8 +88,6 @@ public class MinigameTut : MinigameDefBase
             OnClick = (args) => ChangeColor(args, Error2)
 
         };
-        Errors.Add(Error2);
-        AddElement(Error2);
         Update();
         Error3 = new()//spoons
         {
@@ -103,10 +98,7 @@ public class MinigameTut : MinigameDefBase
             Fill = "transparent",
             OnClick = (args) => ChangeColor(args, Error3)
 
-        };
-        Errors.Add(Error3);
-        AddElement(Error3);
-        Update();
+        };Update();
         Error4 = new() // black lid
         {
             X = 1260 * (3 / 2),
@@ -117,8 +109,6 @@ public class MinigameTut : MinigameDefBase
             OnClick = (args) => ChangeColor(args, Error4)
 
         };
-        Errors.Add(Error4);
-        AddElement(Error4);
         Update();
         Error5 = new()//B12 Box upside down
         {
@@ -130,8 +120,7 @@ public class MinigameTut : MinigameDefBase
             OnClick = (args) => ChangeColor(args, Error5)
 
         };
-        Errors.Add(Error5);
-        AddElement(Error5);
+        
         Update();
         Error6 = new() //blue lid upside down
         {
@@ -143,8 +132,6 @@ public class MinigameTut : MinigameDefBase
             OnClick = (args) => ChangeColor(args, Error6)
 
         };
-        Errors.Add(Error6);
-        AddElement(Error6);
         Update();
         Error7 = new() //türkis lid moved
         {
@@ -156,8 +143,6 @@ public class MinigameTut : MinigameDefBase
             OnClick = (args) => ChangeColor(args, Error7)
 
         };
-        Errors.Add(Error7);
-        AddElement(Error7);
         Update();
         Error8 = new() //cutting board
         {
@@ -169,8 +154,6 @@ public class MinigameTut : MinigameDefBase
             OnClick = (args) => ChangeColor(args, Error8)
 
         };
-        Errors.Add(Error8);
-        AddElement(Error8);
         Update();
         Error9 = new()//missing 123
         {
@@ -182,8 +165,6 @@ public class MinigameTut : MinigameDefBase
             OnClick = (args) => ChangeColor(args, Error9)
 
         };
-        Errors.Add(Error9);
-        AddElement(Error9);
         Update();
     }
     public void originalpage(EventArgs e)
