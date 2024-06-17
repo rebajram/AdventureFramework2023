@@ -6,7 +6,7 @@ namespace Framework.Minigames.MinigameDefClasses;
 public class MinigameTut : MinigameDefBase
 {
     public int errorsspotted = 0;
-    public override string BackgroundImage { get; set; } = "images/IMG_2455.JPG";
+    public override string BackgroundImage { get; set; } = "images/IMG_2455_new.JPG";
     [Element]
     public Rectangle Rects { get; set; }
     public Rectangle newRect { get; set; }
@@ -37,27 +37,9 @@ public class MinigameTut : MinigameDefBase
             Fill = "red",
             OnClick = (args) => errorspage(args)
         };
-    }
-
-    public void errorspage(EventArgs e)
-    {
-        BackgroundImage = "images/IMG_2457.JPG";
-        Update();
-        newRect = new()
-        {
-            X = 0,
-            Y = 200 * (3 / 2),
-            Width = 100,
-            Height = 600,
-            Fill = "red",
-            OnClick = (args) => originalpage(args)
-        };
-        AddElement(newRect);
-        Rects.Kill();
-        bool found = false;
         Error0 = new() //Box
         {
-            X = 1200*(3/2),
+            X = 1200 * (3 / 2),
             Y = 10 * (3 / 2),
             Width = 350,
             Height = 250,
@@ -98,7 +80,7 @@ public class MinigameTut : MinigameDefBase
             Fill = "transparent",
             OnClick = (args) => ChangeColor(args, Error3)
 
-        };Update();
+        }; Update();
         Error4 = new() // black lid
         {
             X = 1260 * (3 / 2),
@@ -120,7 +102,7 @@ public class MinigameTut : MinigameDefBase
             OnClick = (args) => ChangeColor(args, Error5)
 
         };
-        
+
         Update();
         Error6 = new() //blue lid upside down
         {
@@ -166,6 +148,25 @@ public class MinigameTut : MinigameDefBase
 
         };
         Update();
+    }
+
+    public void errorspage(EventArgs e)
+    {
+        BackgroundImage = "images/IMG_2457.JPG";
+        Update();
+        newRect = new()
+        {
+            X = 0,
+            Y = 200 * (3 / 2),
+            Width = 100,
+            Height = 600,
+            Fill = "red",
+            OnClick = (args) => originalpage(args)
+        };
+        AddElement(newRect);
+        Rects.Kill();
+        bool found = false;
+        
     }
     public void originalpage(EventArgs e)
     {
