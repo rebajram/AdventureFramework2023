@@ -6,7 +6,7 @@ namespace Framework.Minigames.MinigameDefClasses;
 public class FindErrorsMinigame : MinigameDefBase
 {
 	public int errorsspotted = 0;
-	public override string BackgroundImage { get; set; } = "minigame_assets/FindErrors_Rejda/IMG_2455_new.JPG";
+	public override string BackgroundImage { get; set; } = "minigame_assets/FindErrors_Rejda/IMG_2457.png";
 	[Element]
 	public Rectangle Rects { get; set; }
 	public Rectangle newRect { get; set; }
@@ -22,9 +22,10 @@ public class FindErrorsMinigame : MinigameDefBase
 	[Element] public Rectangle Error7 { get; set; }
 	[Element] public Rectangle Error8 { get; set; }
 	[Element] public Rectangle Error9 { get; set; }
-
-
-
+    [Element] public Rectangle Error10 { get; set; }
+    [Element] public Rectangle Error11 { get; set; }
+    [Element] public Rectangle Error12 { get; set; }
+    [Element] public Rectangle Error13 { get; set; }
 
     public FindErrorsMinigame()
 	{
@@ -48,14 +49,14 @@ public class FindErrorsMinigame : MinigameDefBase
         {
             // <edit by laurin>
             X = 1200 * 1620 / 1920,
-            Y = 10,
+            Y = 9,
             // </edit by laurin>
             // <original>			
             // X = 1200 * (3 / 2),
             // Y = 10 * (3 / 2),
             // </original>
-            Width = 350,
-            Height = 250,
+            Width = 280,
+            Height = 220,
             Fill = "transparent",
             OnClick = (args) => ChangeColor(args, Error0)
 
@@ -65,15 +66,15 @@ public class FindErrorsMinigame : MinigameDefBase
         Error1 = new() //blue zylinder
         {
             // <edit by laurin>
-            X = 1000 * 1620 / 1920,
-            Y = 350,
+            X = 840,
+            Y = 370,
             // </edit by laurin>
             // <original>
             // X = 1000 * (3 / 2),
             // Y = 350 * (3 / 2),
             // </original>
-            Width = 110,
-            Height = 240,
+            Width = 90,
+            Height = 170,
             Fill = "transparent",
             OnClick = (args) => ChangeColor(args, Error1)
 
@@ -83,15 +84,15 @@ public class FindErrorsMinigame : MinigameDefBase
         Error2 = new() //purple strip
         {
             // <edit by laurin>
-            X = 1450 * 1620 / 1920,
-            Y = 360,
+            X = 1440 * 1620 / 1920,
+            Y = 380,
             // </edit by laurin>
             // <original>
             // X = 1450 * (3 / 2),
             // Y = 360 * (3 / 2),
             // </original>
-            Width = 110,
-            Height = 200,
+            Width = 100,
+            Height = 170,
             Fill = "transparent",
             OnClick = (args) => ChangeColor(args, Error2)
 
@@ -119,14 +120,14 @@ public class FindErrorsMinigame : MinigameDefBase
         {
             // <edit by laurin>
             X = 1260 * 1620 / 1920,
-            Y = 510,
+            Y = 520,
             // </edit by laurin>
             // <original>
             // X = 1260 * (3 / 2),
             // Y = 510 * (3 / 2),
             // </original>
-            Width = 120,
-            Height = 200,
+            Width = 100,
+            Height = 190,
             Fill = "transparent",
             OnClick = (args) => ChangeColor(args, Error4)
 
@@ -136,7 +137,7 @@ public class FindErrorsMinigame : MinigameDefBase
         Error5 = new()//B12 Box upside down
         {
             // <edit by laurin>
-            X = 1180 * 1620 / 1920,
+            X = 980,
             Y = 620,
             // </edit by laurin>
             // <original>
@@ -154,14 +155,14 @@ public class FindErrorsMinigame : MinigameDefBase
         Error6 = new() //blue lid upside down
         {
             // <edit by laurin>
-            X = 792 * 1620 / 1920,
-            Y = 390,
+            X = 640,
+            Y = 385,
             // </edit by laurin>
             // <original>
             // X = 792 * (3 / 2),
             // Y = 390 * (3 / 2),
             // </original>
-            Width = 100,
+            Width = 90,
             Height = 180,
             Fill = "transparent",
             OnClick = (args) => ChangeColor(args, Error6)
@@ -172,15 +173,15 @@ public class FindErrorsMinigame : MinigameDefBase
         Error7 = new() //t�rkis lid moved
         {
             // <edit by laurin>
-            X = 750 * 1620 / 1920,
-            Y = 600,
+            X = 620,
+            Y = 580,
             // </edit by laurin>
             // <original>
             // X = 750 * (3 / 2),
             // Y = 600 * (3 / 2),
             // </original>
-            Width = 100,
-            Height = 140,
+            Width = 80,
+            Height = 150,
             Fill = "transparent",
             OnClick = (args) => ChangeColor(args, Error7)
 
@@ -190,14 +191,14 @@ public class FindErrorsMinigame : MinigameDefBase
         Error8 = new() //cutting board
         {
             // <edit by laurin>
-            X = 750 * 1620 / 1920,
+            X = 600,
             Y = 770,
             // </edit by laurin>
             // <original>
             // X = 750 * (3 / 2),
             // Y = 770 * (3 / 2),
             // </original>
-            Width = 100,
+            Width = 90,
             Height = 300,
             Fill = "transparent",
             OnClick = (args) => ChangeColor(args, Error8)
@@ -208,7 +209,7 @@ public class FindErrorsMinigame : MinigameDefBase
         Error9 = new()//missing 123
         {
             // <edit by laurin>
-            X = 560 * 1620 / 1920,
+            X = 450,
             Y = 630,
             // </edit by laurin>
             // <original>
@@ -216,18 +217,86 @@ public class FindErrorsMinigame : MinigameDefBase
             // Y = 630 * (3 / 2),
             // </original>
             Width = 75,
-            Height = 100,
+            Height = 90,
             Fill = "transparent",
             OnClick = (args) => ChangeColor(args, Error9)
 
         };
 
         Update();
+        Error10 = new() //void of purpe strip
+        {
+            // <edit by laurin>
+            X = 1170,
+            Y = 550,
+            // </edit by laurin>
+            // <original>
+            // X = 1450 * (3 / 2),
+            // Y = 360 * (3 / 2),
+            // </original>
+            Width = 90,
+            Height = 170,
+            Fill = "transparent",
+            OnClick = (args) => ChangeColor(args, Error10)
+
+        };
+        Update();
+        Error11 = new() //purple zylinder ig idek
+        {
+            // <edit by laurin>
+            X = 460,
+            Y = 390,
+            // </edit by laurin>
+            // <original>
+            // X = 1450 * (3 / 2),
+            // Y = 360 * (3 / 2),
+            // </original>
+            Width = 90,
+            Height = 170,
+            Fill = "transparent",
+            OnClick = (args) => ChangeColor(args, Error11)
+
+        };
+        Update();
+        Error12 = new() //void of b12
+        {
+            // <edit by laurin>
+            X = 750,
+            Y = 625,
+            // </edit by laurin>
+            // <original>
+            // X = 1450 * (3 / 2),
+            // Y = 360 * (3 / 2),
+            // </original>
+            Width = 60,
+            Height = 90,
+            Fill = "transparent",
+            OnClick = (args) => ChangeColor(args, Error12)
+
+        };
+        Update();
+        Error13 = new() //black lid replaced
+        {
+            // <edit by laurin>
+            X = 1280,
+            Y = 540,
+            // </edit by laurin>
+            // <original>
+            // X = 1450 * (3 / 2),
+            // Y = 360 * (3 / 2),
+            // </original>
+            Width = 100,
+            Height = 180,
+            Fill = "transparent",
+            OnClick = (args) => ChangeColor(args, Error13)
+
+        };
+        Update();
     }
 
 	public void errorspage(EventArgs e)
 	{
-		BackgroundImage = "minigame_assets/FindErrors_Rejda/IMG_2457.jpg";
+		BackgroundImage = "minigame_assets/FindErrors_Rejda/IMG_2455_new.png";
 		Update();
 		newRect = new()
 		{
@@ -251,7 +320,7 @@ public class FindErrorsMinigame : MinigameDefBase
 	}
 	public void originalpage(EventArgs e)
 	{
-		BackgroundImage = "minigame_assets/FindErrors_Rejda/IMG_2455.jpg";
+		BackgroundImage = "minigame_assets/FindErrors_Rejda/IMG_2457.png";
 		Update();
 		Rects = new()
 		{
@@ -278,7 +347,7 @@ public class FindErrorsMinigame : MinigameDefBase
 		rect.Fill = "rgba(0,255,0,0.5)";
 		Update();
 		errorsspotted++;
-		if (errorsspotted == 10)
+		if (errorsspotted == 14)
 		{
 			Finish(null, "IMG_2455");
 		}
